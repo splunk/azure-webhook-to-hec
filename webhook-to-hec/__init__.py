@@ -19,7 +19,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     #Get Body
     webhook_body = req.get_body()
 
-
     #Create URLLib3 Pool Manager
     http = urllib3.PoolManager()
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
