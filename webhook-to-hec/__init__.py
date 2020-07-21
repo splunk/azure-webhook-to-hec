@@ -26,6 +26,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     #Post Event
     r = http.request('POST', full_url, body=webhook_body, headers={'Content-Type': 'application/json', 'Authorization':'Splunk '+token})
     return func.HttpResponse(
-             "This was successfully posted to "+full_url,
+             body="{\"body\": \"Success\",\"statusCode\": 200}",
              status_code=200
     )
